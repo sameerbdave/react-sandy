@@ -22,6 +22,12 @@ const Card = () => {
           )
         })
         }
+
+        {/* {Array.apply(null, {length:10}).map((a,index) =>{
+          return(
+            <div>{index}1</div>
+          )
+        })} */}
       </div>
     </div>
   )
