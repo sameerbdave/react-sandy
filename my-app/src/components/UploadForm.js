@@ -1,4 +1,4 @@
-const UploadForm = ({isVisible ,onChange, onSubmit}) => {
+const UploadForm = ({isVisible ,onChange, onSubmit,}) => {
     return (
       isVisible && <>
       <p className="display-6 text-center mb-3">Upload Stock Image</p>
