@@ -29,18 +29,21 @@ const Card = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     setItems([input.path,...items])
+    setInput({title: null, file: null, path:null})
+    collapse(false)
   }
 
   useEffect(() =>{
     setCount(`you have ${items.length} image${items.length > 1 ? 's': ''}`)
   },[items])
 
+  
   return (
     <div className="container text-center">
        <button className='btn btn-warning float-end mt-5' onClick={toggle}>{isCollapsed ? 'Close': '+Add'}</button>
        <div className='clearfix'></div>
        <UploadForm 
-       
+       input = {input}
        isVisible ={isCollapsed} 
        onChange = {handleOnChnage}
        onSubmit = {handleOnSubmit}
